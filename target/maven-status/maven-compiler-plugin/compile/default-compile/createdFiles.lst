@@ -1,0 +1,8 @@
+com\altercode\backend\model\Produto.class
+com\altercode\backend\model\Categoria.class
+com\altercode\backend\servlet\pServlet.class
+com\altercode\backend\Application.class
+com\altercode\backend\dao\ProdutoDAO.class
+com\altercode\backend\IDAO\ProdutoIDAO.class
+com\altercode\backend\infra\ConnectionFactory.class
+com\altercode\backend\model\UnidadeMedida.class

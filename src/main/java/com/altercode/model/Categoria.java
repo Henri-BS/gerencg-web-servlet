@@ -1,0 +1,14 @@
+package com.altercode.model;
+
+public enum Categoria {
+    ALIMENTICIOS,
+    BRINQUEDOS,
+    COSMETICOS_HIGIENE,
+    COZINHA,
+    ELETRONICOS,
+    LIMPEZA,
+    PAPELARIA_ESCOLAR,
+    TECIDOS_ACESSORIOS,
+    UTENCILIOS_DOMESTICOS,
+    OUTROS
+}
