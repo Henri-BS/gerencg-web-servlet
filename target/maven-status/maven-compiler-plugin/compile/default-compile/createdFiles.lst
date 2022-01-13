@@ -1,8 +1,9 @@
-com\altercode\backend\model\Produto.class
-com\altercode\backend\model\Categoria.class
-com\altercode\backend\servlet\pServlet.class
-com\altercode\backend\Application.class
-com\altercode\backend\dao\ProdutoDAO.class
-com\altercode\backend\IDAO\ProdutoIDAO.class
-com\altercode\backend\infra\ConnectionFactory.class
-com\altercode\backend\model\UnidadeMedida.class
+com\altercode\infra\ConnectionFactory.class
+com\altercode\dao\ProdutoDAO.class
+com\altercode\model\Produto.class
+com\altercode\idao\ProdutoIDAO.class
+com\altercode\Application.class
+com\altercode\model\Categoria.class
+com\altercode\model\UnidadeMedida.class
+com\altercode\servlet\AdicionaProdutoServlet.class
+com\altercode\servlet\pServlet.class

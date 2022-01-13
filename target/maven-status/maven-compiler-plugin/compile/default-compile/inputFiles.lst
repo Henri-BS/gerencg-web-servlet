@@ -1,9 +1,9 @@
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\servlet\PrimeiraServlet.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\model\UnidadeMedida.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\model\Categoria.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\Adicionar.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\dao\ProdutoDAO.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\model\Produto.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\Atualizar.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\infra\ConnectionFactory.java
-C:\Program Files\IdeaProjects\gerencg-serv\src\main\java\com\gerencg\backend\interf\ProdutoIDAO.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\infra\ConnectionFactory.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\idao\ProdutoIDAO.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\dao\ProdutoDAO.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\Application.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\model\Categoria.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\model\Produto.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\servlet\AdicionaProdutoServlet.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\servlet\pServlet.java
+C:\workspace\ws-project\gerencg-web-servlet\src\main\java\com\altercode\model\UnidadeMedida.java

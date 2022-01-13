@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gerencg-web-servlet-java" />
+        <module name="gerencg-web-servlet" />
       </profile>
     </annotationProcessing>
   </component>
