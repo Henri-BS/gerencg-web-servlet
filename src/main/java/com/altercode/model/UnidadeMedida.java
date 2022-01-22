@@ -1,7 +1,6 @@
 package com.altercode.model;
 
 public enum UnidadeMedida {
-    ALIMENTICIOS,
     KILOGRAMA,
     GRAMA,
     MILIGRAMA,

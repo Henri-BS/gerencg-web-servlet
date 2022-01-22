@@ -72,7 +72,6 @@ public class Application {
 
     public void inserirProduto() {
 
-
         produto.setId(112L);
         produto.setDescricao("Arroz Carvalho 1 kg");
         produto.setQuantidade(70);
@@ -94,7 +93,6 @@ public class Application {
     }
 
     public void atualizarProduto() {
-        ProdutoDAO dao = new ProdutoDAO();
         Optional<Produto> produtoOptional = dao.findById(111L);
         Produto prod = produtoOptional.get();
         prod.setDescricao("Arroz Italianinho 1kg");
@@ -137,7 +135,6 @@ public class Application {
             System.out.println("Categoria: " +prod.getCategoria());
             System.out.println("Unidade de medida: " +prod.getMedida());
         });
-
     }
 
     public void buscarCategoria() {

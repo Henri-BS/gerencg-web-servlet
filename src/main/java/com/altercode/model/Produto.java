@@ -23,6 +23,9 @@ public class Produto {
         this.medida = medida;
     }
 
+    public Produto(String descricaoStr, int quantidade, double preco, LocalDate validade, Categoria categoria, UnidadeMedida medida) {
+    }
+
     public Long getId() {
         return id;
     }

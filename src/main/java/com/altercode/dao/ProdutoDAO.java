@@ -14,6 +14,13 @@ import java.util.Optional;
 
 public class ProdutoDAO implements ProdutoIDAO {
 
+    public ProdutoDAO(Connection connection) {
+    }
+
+    public ProdutoDAO() {
+
+    }
+
     @Override
     public Produto save(Produto produto) {
         try (Connection con = ConnectionFactory.getConnection()){
