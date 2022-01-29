@@ -74,9 +74,9 @@ public class Application {
 
         produto.setId(112L);
         produto.setDescricao("Arroz Carvalho 1 kg");
-        produto.setQuantidade(70);
-        produto.setPreco(4.70);
-        produto.setValidade(LocalDate.of(2022, 6, 20));
+        produto.setQuantidade("70");
+        produto.setPreco("4.70R$");
+        produto.setValidade("11/1/2022");
         produto.setCategoria(Categoria.ALIMENTICIOS);
         produto.setMedida(UnidadeMedida.KILOGRAMA);
 
@@ -96,9 +96,9 @@ public class Application {
         Optional<Produto> produtoOptional = dao.findById(111L);
         Produto prod = produtoOptional.get();
         prod.setDescricao("Arroz Italianinho 1kg");
-        prod.setQuantidade(97);
-        prod.setPreco(3.80);
-        prod.setValidade(LocalDate.of(9999, 12, 31));
+        prod.setQuantidade("97");
+        prod.setPreco("3.80R$");
+        prod.setValidade("31/12/9999");
         prod.setCategoria(Categoria.ALIMENTICIOS);
         prod.setMedida(UnidadeMedida.KILOGRAMA);
 
@@ -120,8 +120,7 @@ public class Application {
 
     }
 
-    public void listarProdutos() {
-        List<Produto> produtos = dao.findAllProd();
+    public void listarProdutos(){
     }
 
     public void buscarId() {

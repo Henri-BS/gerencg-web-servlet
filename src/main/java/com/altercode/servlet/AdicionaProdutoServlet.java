@@ -22,25 +22,35 @@ public class AdicionaProdutoServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String descricaoStr  = req.getParameter("descricao");
-        String quantidadeStr  = req.getParameter("quantidade");
-        String precoStr  = req.getParameter("preco");
-        String validadeStr  = req.getParameter("validade");
-        String categoriaStr  = req.getParameter("categoria");
-        String unidade_medidaStr  = req.getParameter("unidade-medida");
+        resp.setContentType("text/html");
+        PrintWriter writer = resp.getWriter();
 
-        int quantidade = Integer.parseInt(quantidadeStr);
-        double preco = Double.parseDouble(precoStr);
-        LocalDate validade = LocalDate.parse(validadeStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        Categoria categoria = Categoria.valueOf(categoriaStr);
-        UnidadeMedida medida = UnidadeMedida.valueOf(unidade_medidaStr);
+        String descricao = req.getParameter("descricao");
+        String quantidade = req.getParameter("quantidade");
+        String preco = req.getParameter("preco");
+        String validade = req.getParameter("validade");
+        String categoria = req.getParameter("categoria");
+        String unidade_medida = req.getParameter("unidade-medida");
 
-        Produto produto = new Produto(descricaoStr, quantidade, preco, validade, categoria, medida);
+        Produto produto = new Produto();
+        produto.setDescricao(descricao);
+        produto.setQuantidade(quantidade);
+        produto.setPreco(preco);
+        produto.setValidade(validade);
+
         Connection connection = ConnectionFactory.getConnection();
         ProdutoDAO dao = new ProdutoDAO(connection);
-        dao.save(produto);
 
-        PrintWriter writer = resp.getWriter();
+/*        int status = dao.save(produto);
+        if (status > 0) {
+
+            writer.println("<p>Record saved successfully!</p>");
+            req.getRequestDispatcher("index.html").include(req, resp);
+        }
+        else{
+            writer.println("Sorry! unable to save record");
+        }
+*/
         writer.println("<html><body><p>Produto Adicionado!</p></body></html>");
 
     }

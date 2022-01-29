@@ -5,15 +5,15 @@ import java.time.LocalDate;
 public class Produto {
     private Long id;
     private String descricao;
-    private int quantidade;
-    private double preco;
-    private LocalDate validade;
+    private String quantidade;
+    private String preco;
+    private String validade;
     private Categoria categoria;
     private UnidadeMedida medida;
 
     public Produto() {}
 
-    public Produto(Long pk, String descricao, int quantidade, double preco, LocalDate validade, Categoria categoria, UnidadeMedida medida) {
+    public Produto(Long pk, String descricao, String quantidade, String preco, String validade, Categoria categoria, UnidadeMedida medida) {
         this.id = pk;
         this.descricao = descricao;
         this.quantidade = quantidade;
@@ -23,8 +23,12 @@ public class Produto {
         this.medida = medida;
     }
 
-    public Produto(String descricaoStr, int quantidade, double preco, LocalDate validade, Categoria categoria, UnidadeMedida medida) {
+    public Produto(String descricaoStr, Integer quantidade, Double preco, LocalDate validade, Categoria categoria, UnidadeMedida medida) {
     }
+
+    public Produto(Long pk, String descricao, int quantidade, double preco, LocalDate validade, Categoria categoria, UnidadeMedida medida) {
+    }
+
 
     public Long getId() {
         return id;
@@ -42,27 +46,27 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public int getQuantidade() {
+    public String getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade(String quantidade) {
         this.quantidade = quantidade;
     }
 
-    public double getPreco() {
+    public String getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(String preco) {
         this.preco = preco;
     }
 
-    public LocalDate getValidade() {
+    public String getValidade() {
         return validade;
     }
 
-    public void setValidade(LocalDate validade) {
+    public void setValidade(String validade) {
         this.validade = validade;
     }
 

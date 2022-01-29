@@ -14,6 +14,7 @@ import java.util.Optional;
 
 public class ProdutoDAO implements ProdutoIDAO {
 
+
     public ProdutoDAO(Connection connection) {
     }
 
@@ -23,15 +24,16 @@ public class ProdutoDAO implements ProdutoIDAO {
 
     @Override
     public Produto save(Produto produto) {
+
         try (Connection con = ConnectionFactory.getConnection()){
             String sql = "INSERT INTO Produto (id, descricao, quantidade, preco, validade, categoria, unidade_medida) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setLong(1, produto.getId());
             ps.setString(2, produto.getDescricao());
-            ps.setInt(3, produto.getQuantidade());
-            ps.setDouble(4, produto.getPreco());
-            ps.setDate(5, java.sql.Date.valueOf(produto.getValidade()));
+            ps.setString(3, produto.getQuantidade());
+            ps.setString(4, produto.getPreco());
+            ps.setString(5, produto.getValidade());
             ps.setString(6, produto.getCategoria().toString());
             ps.setString(7, produto.getMedida().toString());
             ps.executeUpdate();
@@ -49,9 +51,9 @@ public class ProdutoDAO implements ProdutoIDAO {
 
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, produto.getDescricao());
-            ps.setInt(2, produto.getQuantidade());
-            ps.setDouble(3, produto.getPreco());
-            ps.setDate(4, java.sql.Date.valueOf(produto.getValidade()));
+            ps.setString(2, produto.getQuantidade());
+            ps.setString(3, produto.getPreco());
+            ps.setString(4, produto.getValidade());
             ps.setString(5, produto.getCategoria().toString());
             ps.setString(6, produto.getMedida().toString());
             ps.setLong(7, produto.getId());
@@ -123,9 +125,9 @@ public class ProdutoDAO implements ProdutoIDAO {
             while (rs.next()){
                 Long pk = rs.getLong("id");
                 String descricao = rs.getString("descricao");
-                int quantidade = rs.getInt("quantidade");
-                double preco = rs.getDouble("preco");
-                LocalDate validade = rs.getDate("validade").toLocalDate();
+                String quantidade = rs.getString("quantidade");
+                String preco = rs.getString("preco");
+                String validade = rs.getString("validade");
                 Categoria categoria = Categoria.valueOf(rs.getString("categoria"));
                 UnidadeMedida medida = UnidadeMedida.valueOf(rs.getString("unidade_medida"));
 
@@ -150,13 +152,13 @@ public class ProdutoDAO implements ProdutoIDAO {
             while (rs.next()){
                 Long pk = rs.getLong("id");
                 String descricao = rs.getString("descricao");
-                int quantidade = rs.getInt("quantidade");
-                double preco = rs.getDouble("preco");
-                LocalDate validade = rs.getDate("validade").toLocalDate();
+                String quantidade = rs.getString("quantidade");
+                String preco = rs.getString("preco");
+                String validade = rs.getString("validade");
                 Categoria cat = Categoria.valueOf(rs.getString("categoria"));
                 UnidadeMedida medida = UnidadeMedida.valueOf(rs.getString("unidade_medida"));
 
-                Produto produto = new Produto();
+                Produto produto = new Produto(pk, descricao, quantidade, preco, validade, cat, medida);
                 produtos.add(produto);
             }
         } catch (SQLException ex) {
@@ -178,13 +180,13 @@ public class ProdutoDAO implements ProdutoIDAO {
             while (rs.next()){
                 Long pk = rs.getLong("id");
                 String descricao = rs.getString("descricao");
-                int quantidade = rs.getInt("quantidade");
-                double preco = rs.getDouble("preco");
-                LocalDate validade = rs.getDate("validade").toLocalDate();
+                String quantidade = rs.getString("quantidade");
+                String preco = rs.getString("preco");
+                String validade = rs.getString("validade");
                 Categoria cat = Categoria.valueOf(rs.getString("categoria"));
                 UnidadeMedida med = UnidadeMedida.valueOf(rs.getString("unidade_medida"));
 
-                Produto produto = new Produto();
+                Produto produto = new Produto(pk, descricao, quantidade, preco, validade, cat, medida);
                 produtos.add(produto);
             }
 
